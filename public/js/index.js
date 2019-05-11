@@ -8,10 +8,10 @@ socket.on('connect', function () {
     //     text: 'xD'
     // });
 
-    socket.emit('createMessage', {
-        from: 'client@msg.com',
-        text: 'Client message text'
-    });
+    // socket.emit('createMessage', {
+    //     from: 'client@msg.com',
+    //     text: 'Client message text'
+    // });
 });
 
 socket.on('disconnect', function () {

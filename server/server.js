@@ -20,14 +20,19 @@ io.on('connection', (socket) => {
     //     text: 'Email text'
     // });
 
-    socket.emit('newMessage', {
-        from: 'server@msg.com',
-        text: 'Message text',
-        createdAt: 11052018
-    });
+    // socket.emit('newMessage', {
+    //     from: 'server@msg.com',
+    //     text: 'Message text',
+    //     createdAt: 11052018
+    // });
 
     socket.on('createMessage', (msg) => {
         console.log(msg);
+        io.emit('newMessage', {
+            from: msg.from,
+            text: msg.text,
+            createdAt: new Date().getTime()
+        });
     });
 
     // socket.on('createEmail', (email) => {
