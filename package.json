@@ -15,5 +15,9 @@
   "dependencies": {
     "express": "^4.16.4",
     "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "expect": "^24.8.0",
+    "mocha": "^6.1.4"
   }
 }
